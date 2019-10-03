@@ -40,3 +40,66 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+const navBar = document.querySelectorAll('a');
+navBar[0].textContent = siteContent['nav']['nav-item-1'];
+navBar[1].textContent = siteContent['nav']['nav-item-2'];
+navBar[2].textContent = siteContent['nav']['nav-item-3'];
+navBar[3].textContent = siteContent['nav']['nav-item-4'];
+navBar[4].textContent = siteContent['nav']['nav-item-5'];
+navBar[5].textContent = siteContent['nav']['nav-item-6'];
+
+
+const title = document.querySelector('h1');
+title.textContent = siteContent['cta']['h1'];
+let ctaImg = document.getElementById('cta-img');
+ctaImg.setAttribute('src', siteContent['cta']['img-src']);
+const button = document.querySelector('button');
+button.textContent = siteContent['cta']['button'];
+const middleImg = document.getElementById('middle-img');
+middleImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
+const content = document.querySelectorAll('.text-content h4');
+const contentP = document.querySelectorAll('.text-content p');
+
+content[0].textContent = siteContent['main-content']['features-h4'];
+content[1].textContent = siteContent['main-content']['about-h4'];
+content[2].textContent = siteContent['main-content']['services-h4'];
+content[3].textContent = siteContent['main-content']['product-h4'];
+content[4].textContent = siteContent['main-content']['vision-h4'];
+
+contentP[0].textContent = siteContent['main-content']['features-content'];
+contentP[1].textContent = siteContent['main-content']['about-content'];
+contentP[2].textContent = siteContent['main-content']['services-content'];
+contentP[3].textContent = siteContent['main-content']['product-content'];
+contentP[4].textContent = siteContent['main-content']['vision-content'];
+
+const contactHeader = document.querySelector('.contact h4');
+const contactP = document.querySelectorAll('.contact p');
+
+contactHeader.textContent = siteContent['contact']['contact-h4'];
+contactP[0].textContent = siteContent['contact']['address'];
+contactP[1].textContent = siteContent['contact']['phone'];
+contactP[2].textContent = siteContent['contact']['email'];
+
+const footerP = document.querySelector('footer p');
+footerP.textContent = siteContent['footer']['copyright'];
+
+navBar[0].style.color = 'green';
+navBar[1].style.color = 'green';
+navBar[2].style.color = 'green';
+navBar[3].style.color = 'green';
+navBar[4].style.color = 'green';
+navBar[5].style.color = 'green';
+
+
+
+const navAddition = document.querySelector('nav');
+const navAppend = document.createElement('a');
+navAppend.textContent = 'FAQ';
+navAppend.style.color = 'green';
+navAddition.appendChild(navAppend);
+
+const navBarPrepend = document.createElement('a');
+navBarPrepend.textContent = 'Careers';
+navBarPrepend.style.color = 'green';
+navAddition.prepend(navBarPrepend);
